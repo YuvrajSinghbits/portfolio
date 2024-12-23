@@ -1,0 +1,174 @@
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #f5f5f5;
+            background-color: #121212;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        header {
+            background: #e50914;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            animation: fadeInDown 1.5s ease-in-out;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+        }
+        nav {
+            background: #181818;
+            padding: 1rem 0;
+            animation: fadeIn 1s ease-in-out;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        nav ul li a {
+            color: #f5f5f5;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #e50914;
+        }
+        section {
+            padding: 3rem 1rem;
+            max-width: 1200px;
+            margin: auto;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+        section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: #e50914;
+        }
+        .about p {
+            text-align: center;
+            font-size: 1.1rem;
+            margin: 0 auto;
+            max-width: 800px;
+            line-height: 1.8;
+        }
+        .experience, .projects, .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .experience ul li, .projects ul li {
+            background: #181818;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: zoomIn 1s ease-in-out;
+        }
+        .experience ul li:hover, .projects ul li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+        .skills ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            list-style: none;
+            justify-content: center;
+        }
+        .skills ul li {
+            background: #e50914;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            animation: bounceIn 1s ease-in-out;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #181818;
+            color: #f5f5f5;
+            margin-top: 2rem;
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .contact p, .contact a {
+            text-align: center;
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+        .contact a {
+            color: #e50914;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        @keyframes bounceIn {
+            0%, 20%, 40%, 60%, 80%, 100% {
+                transform: translateY(0);
+            }
+            30%, 50%, 70% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
